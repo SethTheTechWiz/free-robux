@@ -3,26 +3,18 @@
 <html>
 <head>
   <title>Free Robux!</title>
-
-  <style>
-  .download-button {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .download-button:hover {
-    cursor: pointer;
-    filter: brightness(110%);
-  }
-  </style>
+  <link rel="stylesheet" type="text/css" href="styling.css">
+  <script type="text/javascript" src="website.js"></script>
 </head>
 
 
 <body>
-  <a href="https://bit.ly/3maC10B">
-    <img src="download_button.png" class="download-button"></img>
-  </a>
+  <div class="center">
+    <button onclick="download()" id="download-button">
+      <img src="download_button.png" class="download-button-image"></img>
+    </button>
+
+    <h1 id="main-text"></h1>
+  </div>
 </body>
 </html>

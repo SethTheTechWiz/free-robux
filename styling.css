@@ -1,0 +1,44 @@
+@font-face {
+  font-family: RobotoSlab;
+  src: url("Fonts/Roboto_Slab.ttf");
+}
+
+
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
+
+
+.download-button-image {
+  width: 50%;
+}
+
+.download-button-image:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+}
+
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+
+
+
+#main-text {
+  font-family: RobotoSlab;
+  font-size: 500%;
+}
+
+#main-text:hover {
+  cursor: default;
+}
