@@ -24,8 +24,8 @@ button {
 
 .download-button-image:hover {
   cursor: pointer;
-  filter: brightness(110%);
 
+  filter: brightness(110%);
   transform: scale(1.2);
 }
 
