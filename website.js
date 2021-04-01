@@ -25,11 +25,7 @@ window.addEventListener("load", () => {
       specialVideoSource.type = "video/mp4";
       specialVideo.appendChild(specialVideoSource);
       specialVideo.onended = () => {
-        specialVideo.remove();
-
-        mainText.innerText = "sorry not sorry";
-        mainText.style.display = "inline";
-        mainText.style.color = "rgb(255, 255, 255)";
+        window.close();
       };
 
 
