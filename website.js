@@ -14,22 +14,26 @@ window.addEventListener("load", () => {
       mainText.style.display = "none";
 
       document.body.style.backgroundColor = "rgb(0, 0, 0)";
-      document.title = "Rickroll ;)";
 
-      let specialVideo = document.createElement("VIDEO");
-      specialVideo.autoplay = true;
-      specialVideo.style.width = "100%";
-      specialVideo.style.height = "100%";
-      let specialVideoSource = document.createElement("SOURCE");
-      specialVideoSource.src = "special_video.mp4";
-      specialVideoSource.type = "video/mp4";
-      specialVideo.appendChild(specialVideoSource);
-      specialVideo.onended = () => {
+      let video = document.createElement("VIDEO");
+      video.autoplay = true;
+      video.controls = true;
+      video.style.width = "100%";
+      video.style.height = "100%";
+      let videoSource = document.createElement("SOURCE");
+      videoSource.src = "special_video.mp4";
+      videoSource.type = "video/mp4";
+
+      video.onplay = () => {
+        document.title = "Rickroll ;)";
+      }
+
+      video.onended = () => {
         window.close();
       };
 
-
-      main.appendChild(specialVideo);
+      video.appendChild(videoSource);
+      main.appendChild(video);
     }, 1500);
   }
 });
