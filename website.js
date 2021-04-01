@@ -11,13 +11,7 @@ window.addEventListener("load", () => {
     mainText.innerText = "april fools";
 
     setTimeout(() => {
-      let options =
-      "width=" + String(Math.floor(screen.width / 2)) +
-      ",height=" + String(Math.floor(screen.height / 2)) +
-      ",left=" + String(Math.floor(screen.width / 4)) +
-      ",top=" + String(Math.floor(screen.height / 4));
-
-      let specialVideo = window.open("special_video.mp4", "_blank", options);
+      window.close();
     }, 1500);
   }
 });
