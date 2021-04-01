@@ -1,0 +1,56 @@
+@font-face {
+  font-family: RobotoSlab;
+  src: url("Fonts/Roboto_Slab.ttf");
+}
+
+
+
+body {
+  outline-style: none;
+  user-select: none;
+}
+
+button {
+  outline: inherit;
+  border: none;
+  background-color: transparent;
+}
+
+
+
+.download-button-image {
+  width: 50%;
+
+  transition-property: transform;
+  transition-duration: 0.5s;
+
+  /* Back Out Easing */
+  transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.download-button-image:hover {
+  cursor: pointer;
+
+  filter: brightness(110%);
+  transform: scale(1.2);
+}
+
+
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
+
+#main-text {
+  font-family: RobotoSlab;
+  font-size: 500%;
+}
+
+#main-text:hover {
+  cursor: default;
+}
