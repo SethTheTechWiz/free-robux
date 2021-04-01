@@ -5,10 +5,15 @@
 
 
 
+body {
+  outline-style: none;
+  user-select: none;
+}
+
 button {
+  outline: inherit;
   border: none;
   background-color: transparent;
-  outline: none;
 }
 
 
@@ -38,8 +43,6 @@ button {
   align-items: center;
   height: 100%;
 }
-
-
 
 
 
