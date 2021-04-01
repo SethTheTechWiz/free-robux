@@ -29,7 +29,11 @@ window.addEventListener("load", () => {
       }
 
       video.onended = () => {
-        window.close();
+        video.remove();
+        
+        mainText.style.color = "rgb(255, 255, 255)";
+        mainText.innerText = "sorry, not sorry.";
+        mainText.style.display = "inline";
       }
 
       video.appendChild(videoSource);
