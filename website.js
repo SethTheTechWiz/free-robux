@@ -11,7 +11,29 @@ window.addEventListener("load", () => {
     mainText.innerText = "april fools";
 
     setTimeout(() => {
-      window.close();
+      mainText.style.display = "none";
+
+      document.body.style.backgroundColor = "rgb(0, 0, 0)";
+
+      let video = document.createElement("VIDEO");
+      video.autoplay = true;
+      video.controls = true;
+      video.style.width = "100%";
+      video.style.height = "100%";
+      let videoSource = document.createElement("SOURCE");
+      videoSource.src = "special_video.mp4";
+      videoSource.type = "video/mp4";
+
+      video.onplay = () => {
+        document.title = "Rickroll ;)";
+      }
+
+      video.onended = () => {
+        window.close();
+      }
+
+      video.appendChild(videoSource);
+      main.appendChild(video);
     }, 1500);
   }
 });
