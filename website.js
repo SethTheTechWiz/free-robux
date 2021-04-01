@@ -11,30 +11,13 @@ window.addEventListener("load", () => {
     mainText.innerText = "april fools";
 
     setTimeout(() => {
-      mainText.style.display = "none";
+      let options =
+      "width=" + String(Math.floor(screen.width / 2)) +
+      ",height=" + String(Math.floor(screen.height / 2)) +
+      ",left=" + String(Math.floor(screen.width / 4)) +
+      ",top=" + String(Math.floor(screen.height / 4));
 
-      document.body.style.backgroundColor = "rgb(0, 0, 0)";
-
-      let video = document.createElement("VIDEO");
-      video.autoplay = true;
-      video.controls = true;
-      video.style.width = "100%";
-      video.style.height = "100%";
-      let videoSource = document.createElement("SOURCE");
-      videoSource.src = "special_video.mp4";
-      videoSource.type = "video/mp4";
-
-      video.onplay = () => {
-        document.title = "Rickroll ;)";
-      }
-
-      video.onended = () => {
-        video.remove();
-        window.close();
-      };
-
-      video.appendChild(videoSource);
-      main.appendChild(video);
+      let specialVideo = window.open("special_video.mp4", "_blank", options);
     }, 1500);
   }
 });

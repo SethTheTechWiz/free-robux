@@ -5,48 +5,7 @@
   <title>Free Robux!</title>
   <link rel="stylesheet" type="text/css" href="styling.css">
   <link rel="icon" type="image/png" href="robux_icon.png">
-  <script type="text/javascript">
-  let onDownload;
-
-  window.addEventListener("load", () => {
-    onDownload = function() {
-      let main = document.getElementById("main");
-
-      let downloadButton = document.getElementById("download-button");
-      downloadButton.remove();
-
-      let mainText = document.getElementById("main-text");
-      mainText.innerText = "april fools";
-
-      setTimeout(() => {
-        mainText.style.display = "none";
-
-        document.body.style.backgroundColor = "rgb(0, 0, 0)";
-
-        let video = document.createElement("VIDEO");
-        video.autoplay = true;
-        video.controls = true;
-        video.style.width = "100%";
-        video.style.height = "100%";
-        let videoSource = document.createElement("SOURCE");
-        videoSource.src = "special_video.mp4";
-        videoSource.type = "video/mp4";
-
-        video.onplay = () => {
-          document.title = "Rickroll ;)";
-        }
-
-        video.onended = () => {
-          window.close();
-        }
-
-        video.appendChild(videoSource);
-        main.appendChild(video);
-      }, 1500);
-    }
-  });
-
-  </script>
+  <script type="text/javascript" href="website.js"></script>
 </head>
 
 
