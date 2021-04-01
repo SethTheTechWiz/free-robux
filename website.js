@@ -29,6 +29,8 @@ window.addEventListener("load", () => {
       }
 
       video.onended = () => {
+        video.remove();
+
         window.close();
       };
 
