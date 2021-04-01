@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
     mainText.innerText = "april fools";
 
     setTimeout(() => {
-      mainText.remove();
+      mainText.style.display = "none";
 
       document.body.style.backgroundColor = "rgb(0, 0, 0)";
       document.title = "Rickroll ;)";
@@ -25,7 +25,11 @@ window.addEventListener("load", () => {
       specialVideoSource.type = "video/mp4";
       specialVideo.appendChild(specialVideoSource);
       specialVideo.onended = () => {
-        window.close();
+        specialVideo.remove();
+
+        mainText.innerText = "sorry not sorry";
+        mainText.style.display = "inline";
+        mainText.style.color = "rgb(255, 255, 255)";
       };
 
 
